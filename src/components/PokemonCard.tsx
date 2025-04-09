@@ -2,7 +2,7 @@
 import React from 'react'
 import { Pokemon } from '../types/pokemons';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
 interface Props {
     character: Pokemon;
@@ -16,10 +16,13 @@ const PokemonCard = ({ character }: Props) => {
         <View style={styles.card}>
             <Text style={styles.name}>{character.name}</Text>
             <View style={styles.imageContainer}>
-                {/* <Image source={{ uri: character.sprites.back_default }} style={styles.image} />
+                <Pressable onPress={() => navigation.navigate('Detalles', { characterId: character.id })}>
+                        {/* <Image source={{ uri: character.sprites.back_default }} style={styles.image} />
                 <Image source={{ uri: character.sprites.back_shiny }} style={styles.image} /> */}
                 <Image source={{ uri: character.sprites.front_default }} style={styles.image} />
                 {/* <Image source={{ uri: character.sprites.front_shiny }} style={styles.image} /> */}
+                </Pressable>
+            
 
             </View>
         </View>

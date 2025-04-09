@@ -58,7 +58,7 @@ const RegisterScreen = ({ navigation }: any) => {
                 onChangeText={setPass}>
             </TextInput>
 
-            <Button title='Crear Cuenta' onPress={manageRegistration} ></Button>
+            <Button title='Crear Cuenta' onPress={manageRegistration} color={'#d31b18'} ></Button>
 
         </View>
     )
@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#2B6EB6'
     },
     input: {
         borderWidth: 1,

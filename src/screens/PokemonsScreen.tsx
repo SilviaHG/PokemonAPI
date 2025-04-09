@@ -15,13 +15,14 @@ const PokemonsScreen = () => {
         const fetchPokemon = async () => {
             setLoading(true);
             try {
-                const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+                const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=500');
 
                 if (!response.ok) {
                     throw new Error('Error fetching data');
                   }
 
                 const data = await response.json();
+
 
                 const pokemonData = await Promise.all(
                     data.results.map(async (poke: any) => {
@@ -69,7 +70,7 @@ const PokemonsScreen = () => {
         />
 
         <ScrollView contentContainerStyle={styles.cardsContainer}>
-            {character.map((poke) => (
+            {filteredCharacters.map((poke) => (
                 <PokemonCard key={poke.id} character={poke} />
             ))}
         </ScrollView>

@@ -46,9 +46,9 @@ const StackNavigator = () => {
       <Stack.Screen name='Splash' component={SplashScreen} />
       <Stack.Screen name='DetailsPokemon' component={DetailsPokemonScreen} 
                     options={{ 
-                      headerStyle: { backgroundColor: '#2B6EB6' },
-                      headerTintColor: '#fff', 
-                      headerShown: false,
+                      title: 'Detalles del Pokémon',
+                      headerStyle: { backgroundColor: '#d31b18' },
+                      headerTintColor: '#fff',
                       }} />
     </Stack.Navigator>
   )

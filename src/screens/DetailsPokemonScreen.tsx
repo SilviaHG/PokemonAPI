@@ -57,9 +57,6 @@ const DetailsPokemonScreen = ({ route }: PokemonDetailsProps) => {
     <ScrollView contentContainerStyle={styles.scrollContainer}>
     <View style={styles.container}>
       <Text style={styles.name}>{pokemonDetails.name}</Text>
-      <TouchableOpacity style={styles.button} onPress={handleGoBack}>
-          <Text style={styles.buttonText}>Volver</Text>
-        </TouchableOpacity>
         <Text style={styles.name}></Text>
       <Image source={{ uri: pokemonDetails.sprites.front_default }} style={styles.image} />
       <View style={styles.infoContainer}>
@@ -103,7 +100,6 @@ const styles = StyleSheet.create({
       padding: 20,
       backgroundColor: '#fafafa',
       justifyContent: 'center', // Asegura que el botón se posicione en relación con este contenedor
-      marginTop: 40, // Espacio adicional en la parte inferior para evitar que el contenido quede pegado al borde
     },
     loadingIndicator: {
       flex: 1,
@@ -120,7 +116,6 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       textAlign: 'center',
       color: '#2B6EB6',
-      marginBottom: 15,
       textTransform: 'uppercase',
     },
     image: {

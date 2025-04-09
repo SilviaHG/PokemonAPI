@@ -85,14 +85,14 @@ const DetailsPokemonScreen = ({ route }: PokemonDetailsProps) => {
         ))}
       </View>
 
-      <Text style={styles.sectionTitle}>Movimientos:</Text>
+      {/* <Text style={styles.sectionTitle}>Movimientos:</Text>
       <View style={styles.listContainer}>
         {pokemonDetails.moves.slice(0, 10).map((move, index) => (
           <Text key={index} style={styles.listItem}>
             {move.move.name}
           </Text>
         ))}
-      </View>
+      </View> */}
     </View>
   </ScrollView>
   );

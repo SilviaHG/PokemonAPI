@@ -44,7 +44,7 @@ const StackNavigator = () => {
                       headerShown: false,
                       }} />
       <Stack.Screen name='Splash' component={SplashScreen} />
-      <Stack.Screen name='Detalles' component={DetailsPokemonScreen} 
+      <Stack.Screen name='DetailsPokemon' component={DetailsPokemonScreen} 
                     options={{ 
                       headerStyle: { backgroundColor: '#2B6EB6' },
                       headerTintColor: '#fff', 

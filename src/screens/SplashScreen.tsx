@@ -7,11 +7,11 @@ const SplashScreen = ({ navigation }: any) => {
     useEffect(() => {
 
         const VerifySession = async () => {
-            const user = await AsyncStorage.getItem('userActive')
+            const user = await AsyncStorage.getItem('user')
             setTimeout(() => {
                 if (user) {
                     const data = JSON.parse(user)
-                    navigation.navigate('Inicio', { user: data.username })
+                    navigation.navigate('Inicio', { user: data.username})
                 }
                 else {
                     navigation.replace('Login')
